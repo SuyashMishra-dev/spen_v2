@@ -1,0 +1,56 @@
+@import "src/assets/v1.1/scss/spectrum";
+
+.currencyInput {
+  + .currencyInput {
+    padding-top: 24px;
+  }
+}
+
+.inputGroup {
+  display: grid;
+  grid-template-columns: 6.25rem auto;
+  gap: var(--size-002);
+
+  &.withDropdown {
+    grid-template-columns: 7.5rem auto;
+  }
+
+  .enableDropdown {
+    grid-template-columns: 7.5rem auto;
+  }
+
+  :global {
+    .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+      padding: 7px 15px;
+    }
+
+    .ant-select-disabled.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+      background-color: $white;
+      color: $black-90;
+      cursor: auto;
+    }
+
+    .ant-select-disabled.ant-select-single:not(.ant-select-customize-input) .ant-select-selector input {
+      cursor: auto;
+    }
+
+    .icon {
+      cursor: auto;
+    }
+  }
+}
+
+.options {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: var(--size-008) auto;
+
+  .flag {
+    width: 100%;
+    filter: drop-shadow(0px 0px 2px #d9e3f9);
+  }
+}
+
+.input {
+  text-align: right;
+}

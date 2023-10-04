@@ -1,0 +1,82 @@
+@import "src/Splice/scss/spectrum";
+@import "../Bills.module.scss";
+
+.sidepanel {
+  @extend .sidepanel;
+  background-color: $white-0;
+
+  input {
+    border-radius: var(--size-002);
+    border-color: $white-060;
+  }
+
+  :global {
+    .ant-form-item-explain,
+    .ant-form-item-extra {
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+.preview {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &Section {
+    border: 1px solid $white-050;
+    border-radius: 0.25rem;
+
+    // Section title
+    &:before {
+      content: attr(data-title);
+      padding: 1.5rem;
+      display: block;
+      background-color: $white-050;
+      color: $black-100;
+      font-weight: 600;
+      color: $black-100;
+    }
+  }
+
+  &Content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &Item {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    line-height: 1.5rem;
+
+    & > div:first-child {
+      font-weight: 600;
+      color: $black-100;
+      width: 14.125rem;
+      flex-shrink: 0;
+    }
+
+    & > div:last-child {
+      text-align: right;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.discardModal {
+  text-align: center;
+  line-height: 1.5rem;
+  font-size: 1rem;
+
+  .image {
+    margin: var(--spacing-016) auto var(--spacing-024) auto;
+    width: 100%;
+    height: 7.5rem;
+  }
+}

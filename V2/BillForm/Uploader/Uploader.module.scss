@@ -1,0 +1,208 @@
+.uploader {
+  &.separator {
+    margin-bottom: var(--spacing-024);
+  }
+
+  :global {
+    .ant-upload.ant-upload-drag {
+      border-radius: var(--size-012);
+      border-width: 2px;
+
+      .ant-upload {
+        padding: 0;
+      }
+
+      .ant-upload-btn,
+      .ant-upload-drag-container {
+        display: block;
+      }
+    }
+
+    .react-pdf__Document,
+    .react-pdf__Page,
+    .react-pdf__Page__canvas {
+      margin: 0 auto;
+      width: inherit !important;
+      height: inherit !important;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .react-pdf__message {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.uploaderArea {
+  padding: var(--spacing-012) var(--spacing-024);
+  display: flex;
+  text-align: left;
+  align-items: flex-start;
+  gap: var(--spacing-008);
+
+  & > div {
+    flex: 1 1;
+  }
+}
+
+.uploadInfo {
+  max-width: calc(100% - var(--spacing-032) - var(--spacing-008));
+}
+
+.title {
+  color: var(--text-title-default);
+  margin-bottom: var(--spacing-004);
+}
+
+.uploadIcon {
+  padding: var(--spacing-004);
+  height: var(--size-016);
+  min-width: var(--size-016);
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  column-gap: var(--spacing-004);
+  color: var(--text-caption-default);
+
+  :global {
+    .ant-tooltip.ant-tooltip-placement-bottom .ant-tooltip-inner {
+      color: var(--white-0) !important;
+    }
+  }
+}
+
+.closeIcon {
+  cursor: pointer;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.preview {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-016);
+  width: 100%;
+
+  .previewItem {
+    padding: var(--spacing-008) var(--spacing-016) var(--spacing-008) var(--spacing-008);
+    background-color: var(--fill-neutral-strong);
+    border-radius: var(--size-002);
+    color: var(--text-title-default);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-012);
+    cursor: auto;
+
+    .link {
+      flex: 1 1;
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-012);
+      color: var(--text-title-default);
+      overflow: hidden;
+    }
+
+    .imgContainer {
+      width: var(--size-016);
+      height: var(--size-016);
+    }
+
+    .fileName {
+      flex: 1 1;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+}
+
+.invoicePreview {
+  position: absolute;
+  z-index: 3;
+  left: calc(-100vh * 665 / 900);
+  top: 0;
+  aspect-ratio: 665/900;
+  height: 100vh;
+  background-color: var(--white-0);
+  border-radius: var(--size-010) 0 0 var(--size-010);
+  border-right: 1px solid var(--border-neutral-default);
+  padding: var(--spacing-024) var(--spacing-016) var(--spacing-024) var(--spacing-032);
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    .action {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .invoiceTitle {
+    text-align: center;
+    color: var(--black-100);
+    padding-bottom: var(--spacing-016);
+  }
+
+  .invoice {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    flex: 1 1;
+    box-shadow: var(--elevation-lifted);
+  }
+
+  .action {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: var(--spacing-016);
+    border-bottom-left-radius: var(--radius-5);
+    background-color: var(--fill-system-info);
+    display: flex;
+    column-gap: var(--spacing-024);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 300ms ease, visibility 300ms ease;
+  }
+
+  .actionItem {
+    display: grid;
+    grid-template-columns: var(--spacing-016) 1fr;
+    column-gap: var(--spacing-008);
+    align-items: center;
+  }
+
+  .actionItem {
+    padding: var(--spacing-002);
+    cursor: pointer;
+  }
+
+  .update {
+    color: var(--blue-060);
+  }
+
+  .delete {
+    color: var(--text-body-danger);
+  }
+}
+
+.hint {
+  margin-top: 0.5rem;
+  font-size: var(--size-006);
+  line-height: var(--size-008);
+}

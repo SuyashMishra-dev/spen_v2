@@ -1,0 +1,135 @@
+@import "src/Splice/scss/spectrum";
+
+.formField {
+  + .formField {
+    margin-top: var(--spacing-024);
+  }
+
+  &Help {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    line-height: 1.6;
+  }
+
+  :global {
+    .ant-select {
+      width: 100%;
+    }
+
+    .ant-picker {
+      width: 100%;
+    }
+  }
+}
+
+.formLabel {
+  margin-bottom: var(--spacing-008);
+  display: flex;
+  align-items: center;
+  column-gap: var(--spacing-004);
+
+  > label {
+    margin-bottom: 0;
+
+    span {
+      color: var(--black-015);
+      font-weight: normal;
+    }
+  }
+}
+
+.formGroup {
+  display: flex;
+  column-gap: var(--spacing-008);
+
+  .formField {
+    margin-top: 0;
+  }
+
+  > * {
+    flex: 1 1;
+  }
+
+  /**
+  * col 1-24 for the grid system
+  */
+  @for $i from 1 through 24 {
+    > .col#{$i} {
+      flex: 0 0 calc(100% / 24 * $i);
+    }
+  }
+}
+
+.notFound {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.625rem 0;
+  margin: 0 -0.5rem;
+  font-size: 0.875rem;
+
+  img {
+    width: 3.75rem;
+  }
+
+  &Text {
+    max-width: calc(100% - 4rem);
+    text-align: center;
+  }
+}
+
+.newSelectButton {
+  border: 0;
+  font-size: 0.875rem;
+  width: 100%;
+  text-align: left;
+  box-shadow: none;
+  height: 2.875rem;
+  color: var(--blue-050);
+  cursor: pointer;
+  padding-left: var(--spacing-024);
+  margin-bottom: -4px;
+  border-top: 1px solid var(--white-060);
+  border-radius: 0;
+
+  &:hover {
+    border-color: var(--white-060);
+  }
+
+  &:disabled {
+    color: var(--black-050);
+    background-color: var(--white-0);
+    cursor: not-allowed;
+  }
+}
+
+.selectOptionMultilines {
+  :global {
+    .ant-select-item-option-content {
+      flex-wrap: wrap;
+      & > div:first-child {
+        font-size: 0.875rem;
+        width: 100%;
+      }
+
+      & > div:last-child {
+        font-size: 0.625rem;
+      }
+    }
+  }
+}
+
+.checkboxLabel {
+  color: var(--text-label-default);
+}
+
+.textArea textarea {
+  padding: var(--spacing-012) var(--spacing-016);
+}
+
+.textCounter {
+  text-align: right;
+  margin-top: var(--spacing-008);
+  color: var(--text-caption-default);
+}

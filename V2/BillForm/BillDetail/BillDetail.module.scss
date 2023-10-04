@@ -1,0 +1,29 @@
+@import "src/Splice/scss/spectrum";
+
+.billDetails {
+  .formToggle {
+    margin-top: var(--size-008);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .chevron {
+      margin-left: var(--size-002);
+    }
+  }
+}
+
+.fadeIn {
+  animation-name: fade-in;
+  animation-duration: 300ms;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}

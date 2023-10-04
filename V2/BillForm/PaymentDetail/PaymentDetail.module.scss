@@ -1,0 +1,24 @@
+.title {
+  color: var(--text-title-default);
+  margin-bottom: var(--spacing-024);
+}
+
+.warningMessageContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: var(--spacing-016);
+  background-color: #fffbee;
+  border-radius: var(--radius-m);
+  margin-bottom: var(--spacing-032);
+
+  svg {
+    align-self: flex-start;
+  }
+
+  p {
+    margin-bottom: 0;
+    width: 90%;
+    color: var(--dark-orange-080);
+  }
+}

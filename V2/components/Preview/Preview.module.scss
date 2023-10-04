@@ -1,0 +1,86 @@
+@import "src/Splice/scss/spectrum";
+
+.preview {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &Section {
+    border: 1px solid $white-050;
+    border-radius: 0.25rem;
+
+    // Section title
+    &:before {
+      content: attr(data-title);
+      padding: 1.5rem;
+      display: block;
+      background-color: $white-050;
+      color: $black-100;
+      font-weight: 600;
+      color: $black-100;
+    }
+  }
+
+  &Content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &Item {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    line-height: 1.5rem;
+
+    & > div:first-child {
+      font-weight: 600;
+      color: $black-100;
+      width: 14.125rem;
+      flex-shrink: 0;
+    }
+
+    & > div:last-child {
+      text-align: right;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      column-gap: var(--spacing-004);
+    }
+  }
+
+  &Label {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-024);
+
+    & > div {
+      display: flex;
+      align-items: center;
+    }
+
+    .previewColor {
+      width: var(--size-008);
+      height: var(--size-008);
+      border-radius: var(--radius-2);
+      display: inline-block;
+      margin-right: var(--spacing-008);
+      background-color: var(--black-080);
+    }
+
+    .previewHighlight {
+      @extend .previewColor;
+      background-color: var(--chart-green-default);
+    }
+  }
+
+  .newValue {
+    color: var(--chart-green-default);
+  }
+
+  .oldValue {
+    color: var(--text-body-disabled);
+    text-decoration: line-through;
+  }
+}

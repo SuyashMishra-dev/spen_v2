@@ -1,0 +1,27 @@
+@import "src/Splice/scss/spectrum";
+
+.BillForm {
+  background-color: $white-0;
+  margin-bottom: -2.5rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  padding: var(--spacing-032);
+  height: calc(100vh - 13.188rem);
+  border-top-left-radius: var(--size-010);
+  border-top-right-radius: var(--size-010);
+  overflow-y: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-color: var(--white-0);
+}
+
+.overlayIcon {
+  margin-top: var(--spacing-048);
+}

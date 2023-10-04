@@ -1,0 +1,97 @@
+.customField {
+  margin-top: 0 !important;
+}
+
+.breakdown {
+  position: relative;
+  padding: var(--spacing-024) 0 var(--spacing-024) var(--spacing-024);
+  margin: var(--spacing-008) 0;
+
+  &.gap24 {
+    padding-bottom: 0;
+    margin: 0;
+  }
+}
+
+.fxNote {
+  padding: var(--spacing-008);
+  color: var(--black-015);
+  background-color: var(--dark-navy-007);
+  border-radius: var(--radius-2);
+}
+
+.tdUnderline {
+  text-decoration: underline;
+}
+
+.verticalLine {
+  position: absolute;
+  top: 0;
+  left: 7px;
+  border: 1px solid var(--green-040);
+  width: 1px;
+  height: 100%;
+}
+
+.breakdownItem {
+  display: flex;
+  justify-content: space-between;
+
+  + .breakdownItem {
+    margin-top: var(--spacing-024);
+  }
+}
+
+.detail {
+  text-align: right;
+}
+
+.breakdownIcon {
+  position: absolute;
+  left: 0;
+  background-color: var(--green-040);
+  border-radius: 50%;
+  transition: all 300ms ease;
+}
+
+.plus {
+  transform: rotate(0deg);
+
+  &.times {
+    transform: rotate(45deg);
+  }
+}
+
+.breakdownLabel {
+  div {
+    display: inline-block;
+    line-height: var(--size-010);
+    vertical-align: middle;
+    margin-left: var(--spacing-004);
+    height: var(--size-008);
+  }
+}
+
+.expand {
+  transform: rotate(90deg);
+
+  &.collapse {
+    transform: rotate(-90deg);
+  }
+}
+
+.breakdownAction {
+  color: var(--blue-060);
+  cursor: pointer;
+}
+
+.globalUSD {
+  color: var(--black-005);
+}
+
+.swiftPayment {
+  margin-top: var(--spacing-008);
+  padding: var(--spacing-008) var(--spacing-016);
+  background-color: var(--white-015);
+  border-radius: var(--radius-2);
+}

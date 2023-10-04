@@ -1,0 +1,62 @@
+@import "src/Splice/scss/spectrum";
+
+.flex {
+  display: flex;
+  gap: var(--size-006);
+}
+
+.spaceBetween {
+  @extend .flex;
+  justify-content: space-between;
+}
+
+.dropdown {
+  button {
+    width: 2.3rem;
+    min-width: auto;
+
+    img {
+      transform: scale(80%);
+    }
+  }
+
+  &Menu {
+    border-radius: var(--radius-2);
+
+    li {
+      padding: var(--spacing-012) var(--spacing-016);
+      font-size: var(--size-008);
+    }
+  }
+}
+
+.sidepanel {
+  width: 37rem;
+  color: $black-015;
+
+  &Recipient {
+    background-color: $white-0;
+  }
+
+  :global {
+    div[role="button"] {
+      user-select: none;
+    }
+
+    .ant-form-item-label > label {
+      margin-top: 0;
+      font-weight: 600;
+      font-size: 0.875rem;
+      line-height: var(--size-010);
+      color: $black-050;
+    }
+  }
+}
+
+.errorMessage {
+  color: var(--fill-system-danger-strong);
+  font-size: var(--size-006);
+  margin-top: var(--spacing-008);
+  margin-bottom: var(--spacing-024);
+  display: block;
+}

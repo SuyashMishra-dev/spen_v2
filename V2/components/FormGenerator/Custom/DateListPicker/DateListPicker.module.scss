@@ -1,0 +1,49 @@
+.optionItem {
+  .label {
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-7);
+    line-height: var(--font-lineheight-3);
+    letter-spacing: var(--font-letterspacing-0);
+  }
+  .subLabel {
+    font-size: var(--font-size-0);
+    font-weight: var(--font-weight-4);
+    line-height: var(--font-lineheight-2);
+  }
+}
+
+.customDateBtn {
+  color: var(--blue-060);
+  font-size: var(--font-size-1);
+  font-weight: var(--font-weight-7);
+  line-height: var(--line-height-3);
+  letter-spacing: var(--letterspacing-0);
+  padding: var(--spacing-012) var(--spacing-016);
+  cursor: pointer;
+}
+
+.dateListDropdown {
+  :global {
+    .ant-select-item {
+      padding: 0;
+    }
+  
+    .ant-select-dropdown .ant-select-item-option-content {
+      padding: var(--spacing-012) var(--spacing-016);
+    }
+  
+    .ant-select-selection-item {
+      font-size: var(--font-size-1);
+      // TODO: find a way to change antd datepicker font to spenmo
+      // This is to match antd datepicker font
+      // because antd datepicker can't be set to spenmo font
+      font-family: sans-serif;
+    }
+  
+    .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+      padding: var(--spacing-008) !important;
+      border-radius: 0;
+    }
+  }
+  
+}

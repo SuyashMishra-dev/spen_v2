@@ -1,0 +1,52 @@
+.fieldContainer {
+  :global {
+    .sp-datepicker {
+      border-radius: var(--radius-3);
+    }
+  }
+  .formItem {
+    width: 100%;
+    margin-top: 0;
+    :global {
+      .spm-label {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.labelContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.badgeColor {
+  :global {
+    .ant-badge-status-text {
+      color: var(--green-090);
+    }
+    .ant-badge-status-success {
+      background: var(--green-090);
+    }
+  }
+}
+
+.checkboxContainer {
+  margin-top: var(--size-004);
+  label:last-child {
+    font-size: var(--size-006);
+  }
+}
+
+.errorContainer {
+  display: flex;
+  align-items: center;
+  margin-top: var(--size-002);
+}
+
+.errorMessage {
+  color: var(--red-050);
+  font-size: var(--size-006);
+  margin-left: var(--size-002);
+}

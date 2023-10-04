@@ -1,0 +1,10 @@
+.date {
+  :global {
+    .ant-picker-input > input {
+      // TODO: find a way to change antd datepicker font to spenmo
+      // This is to match the dropdown in datelistpicker font
+      // because antd datepicker can't be set to spenmo font
+      font-family: sans-serif;
+    }
+  }
+}

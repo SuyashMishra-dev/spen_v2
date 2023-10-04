@@ -1,0 +1,39 @@
+.bankValidation {
+  :global {
+    .loading3quaters {
+      height: var(--size-010);
+      width: var(--size-010);
+      border-width: var(--size-002);
+    }
+  }
+
+  .input {
+    padding: var(--spacing-008);
+    border-radius: var(--radius-2);
+  }
+
+  .validatedFailed {
+    color: var(--black-080);
+    display: inline-block;
+    padding-top: var(--spacing-008);
+  }
+  .tryAgain {
+    display: inline-block;
+    margin-left: var(--spacing-008);
+    color: var(--blue-080);
+    cursor: pointer;
+    user-select: none;
+  }
+  .successIcon {
+    color: var(--green-080);
+  }
+  .suggestionIcon {
+    color: var(--blue-080);
+  }
+  .requiredBorder {
+    border-color: var(--fill-system-danger-strong);
+    &:global(.ant-input-affix-wrapper-focused) {
+      box-shadow: 0 0 0 1px var(--red-020);
+    }
+  }
+}

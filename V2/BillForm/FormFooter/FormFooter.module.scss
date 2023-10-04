@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  column-gap: var(--size-008);
+  padding-top: var(--size-012);
+  justify-content: space-between;
+
+  button:focus {
+    box-shadow: 0 0 0 2px var(--bright-orange-040);
+  }
+}
+
+.flex {
+  display: flex;
+  column-gap: var(--size-008);
+}

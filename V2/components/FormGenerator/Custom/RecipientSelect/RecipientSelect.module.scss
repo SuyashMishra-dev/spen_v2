@@ -1,0 +1,33 @@
+.wrapper {
+  position: relative;
+
+  .actions {
+    position: absolute;
+    right: 0;
+    top: -1.5rem;
+    display: flex;
+    gap: 0.25rem;
+
+    & > svg {
+      cursor: pointer;
+    }
+  }
+}
+
+.infoPanel {
+  margin-top: var(--spacing-008);
+
+  h4 {
+    color: var(--text-body-warning);
+  }
+}
+
+.btnGroup {
+  display: flex;
+  margin-top: var(--spacing-008);
+  column-gap: var(--spacing-024);
+
+  button {
+    width: 100%;
+  }
+}
